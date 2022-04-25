@@ -4,6 +4,7 @@ package com.wang.service_education.controller;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wang.commonutils.ResultMethods;
 import com.wang.service_education.entity.EduTeacher;
+import com.wang.service_education.query.TeacherQuery;
 import com.wang.service_education.service.EduTeacherService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -24,7 +25,7 @@ import java.util.Map;
  */
 @Api(description="讲师管理")
 @RestController
-@RequestMapping("/service_education/edu-teacher")
+//@RequestMapping("/service_education/edu-teacher")
 @CrossOrigin
 public class EduTeacherController {
 
@@ -53,6 +54,21 @@ public class EduTeacherController {
         return  ResultMethods.ok().data("total", total).data("rows", records);
     }
 
+    @ApiOperation(value = "分页讲师列表")
+    @GetMapping("/getSomeTeacher2/{page}/{limit}")
+    public ResultMethods pageQuery(
+        @ApiParam(name = "page", value = "当前页码", required = true)
+        @PathVariable Long page,
+        @ApiParam(name = "limit", value = "每页记录数", required = true)
+        @PathVariable Long limit,
+        @ApiParam(name = "teacherQuery", value = "查询对象", required = false)
+        TeacherQuery teacherQuery){
+        Page<EduTeacher> pageParam = new Page<>(page, limit);
+        eduTeacherService.pageQuery(pageParam, teacherQuery);
+        List<EduTeacher> records = pageParam.getRecords();
+        long total = pageParam.getTotal();
+        return  ResultMethods.ok().data("total", total).data("rows", records);
+    }
 
 
 }
