@@ -1,5 +1,6 @@
 package com.wang.servicebase.config;
 
+import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import com.google.common.base.Predicates;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -29,7 +30,12 @@ public class SwaggerConfig {
                 .title("网站-课程中心API文档")
                 .description("本文档描述了课程中心微服务接口定义")
                 .version("1.0")
-                .contact(new Contact("Helen", "http://wang.com", "55317332@qq.com"))
+                .contact(new Contact("Amos", "http://wang.com", "55317332@qq.com"))
                 .build();
+    }
+
+    @Bean
+    public PaginationInterceptor paginationInterceptor() {
+        return new PaginationInterceptor();
     }
 }
