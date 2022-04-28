@@ -54,7 +54,7 @@ public class EduTeacherController {
         return  ResultMethods.ok().data("total", total).data("rows", records);
     }
 
-    @ApiOperation(value = "分页讲师列表")
+    @ApiOperation(value = "分页查询讲师列表")
     @GetMapping("/getSomeTeacher2/{page}/{limit}")
     public ResultMethods pageQuery(
         @ApiParam(name = "page", value = "当前页码", required = true)
