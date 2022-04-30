@@ -19,15 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2070766d-7321-4451-9704-f1ba64ac154b" name="Default Changelist" comment="提交代码">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/common_utils/src/main/java/com/wang/commonutils/ExceptionUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service_edu/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service_edu/src/test/java/com/wang/ioTest/FIleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_edu/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_edu/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_edu/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_edu/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_edu/target/classes/com/wang/service_education/controller/EduTeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_edu/target/classes/com/wang/service_education/controller/EduTeacherController.class" afterDir="false" />
-    </list>
+    <list default="true" id="2070766d-7321-4451-9704-f1ba64ac154b" name="Default Changelist" comment="提交代码" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -155,7 +147,7 @@
       <workItem from="1651154149292" duration="2387000" />
       <workItem from="1651156717179" duration="811000" />
       <workItem from="1651229949188" duration="609000" />
-      <workItem from="1651325627851" duration="2320000" />
+      <workItem from="1651325627851" duration="2783000" />
     </task>
     <task id="LOCAL-00001" summary="添加修改代码">
       <created>1650896086322</created>
@@ -185,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651154596433</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="提交代码">
+      <created>1651330508815</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1651330508815</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
