@@ -3,6 +3,7 @@ package com.wang.service_education.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wang.commonutils.ResultMethods;
+import com.wang.commonutils.UploadUtils;
 import com.wang.service_education.entity.EduTeacher;
 import com.wang.service_education.query.TeacherQuery;
 import com.wang.service_education.service.EduTeacherService;
@@ -11,7 +12,9 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.Map;
 
@@ -29,7 +32,10 @@ import java.util.Map;
 @CrossOrigin
 public class EduTeacherController {
 
-    @Autowired
+    @Resource
+    private UploadUtils uploadUtils;
+
+    @Resource
     private EduTeacherService eduTeacherService;
 
     @ApiOperation(value="查询所有讲师")
@@ -68,6 +74,12 @@ public class EduTeacherController {
         List<EduTeacher> records = pageParam.getRecords();
         long total = pageParam.getTotal();
         return  ResultMethods.ok().data("total", total).data("rows", records);
+    }
+
+    @PostMapping("/getImg")
+    public ResultMethods getImage(MultipartFile multipartFile) {
+        String data = uploadUtils.upload(multipartFile);
+        return ResultMethods.ok().data("data", data);
     }
 
 

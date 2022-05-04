@@ -1,6 +1,8 @@
 package com.wang.ioTest;
 
+import com.wang.commonutils.RedisUtils;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -10,7 +12,6 @@ import java.io.OutputStream;
 public class FIleTest {
     @Test
     public void newFile() {
-//        isDirectory() 是否为文件夹
 //        isFile() 是否为文件
 //        getPath() 得到file的路径
 //        getName() 得到最后一层的名字

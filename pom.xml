@@ -42,6 +42,8 @@
         <cloud-alibaba.version>0.2.2.RELEASE</cloud-alibaba.version>
         <lombok.version>1.18.16</lombok.version>
         <mysql.version>5.1.47</mysql.version>
+        <redis.version>2.2.2.RELEASE</redis.version>
+        <test.version>2.2.2.RELEASE</test.version>
     </properties>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -50,6 +52,18 @@
     </parent>
     <dependencyManagement>
         <dependencies>
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-starter-test</artifactId>-->
+<!--                <version>${test.version}</version>-->
+<!--                <scope>test</scope>-->
+<!--            </dependency>-->
+            <!-- 配置使用redis启动器 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+                <version>${redis.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
